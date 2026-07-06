@@ -1,0 +1,45 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color:#f4f4f4;
+    margin:20px;
+}
+
+
+
+a{
+    color:rgb(26, 16, 16);
+    text-decoration:none;
+    margin:10px;
+    font-weight:bold;
+}
+
+
+
+h2{
+    color:#004080;
+}
+
+img{
+    border-radius:50%;
+    border:3px solid #004080;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:rgb(244, 232, 232);
+}
+
+th{
+    background:#004080;
+    color:rgba(255, 255, 255, 0.889);
+}
+
+th, td{
+    padding:10px;
+    text-align:left;
+}
+
+hr{
+    margin:20px ;
+}

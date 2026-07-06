@@ -1,444 +1,111 @@
 <!DOCTYPE html>
+<html>
 
-<html class="scroll-smooth" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>STUDIO | Portfolio</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;500&amp;family=Geist:wght@400;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind Config -->
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-tertiary-fixed-variant": "#444749",
-                    "on-surface-variant": "#45464d",
-                    "on-primary": "#ffffff",
-                    "surface-bright": "#f8f9ff",
-                    "background": "#f8f9ff",
-                    "surface-variant": "#d3e4fe",
-                    "on-tertiary-container": "#818486",
-                    "primary": "#000000",
-                    "on-error": "#ffffff",
-                    "surface-container-highest": "#d3e4fe",
-                    "secondary-container": "#6cf8bb",
-                    "surface-container-lowest": "#ffffff",
-                    "primary-fixed-dim": "#bec6e0",
-                    "tertiary": "#000000",
-                    "primary-fixed": "#dae2fd",
-                    "error-container": "#ffdad6",
-                    "surface-container-low": "#eff4ff",
-                    "surface-container": "#e5eeff",
-                    "surface-container-high": "#dce9ff",
-                    "primary-container": "#131b2e",
-                    "inverse-primary": "#bec6e0",
-                    "outline": "#76777d",
-                    "inverse-surface": "#213145",
-                    "on-secondary-fixed-variant": "#005236",
-                    "tertiary-fixed-dim": "#c4c7c9",
-                    "on-primary-fixed": "#131b2e",
-                    "secondary-fixed-dim": "#4edea3",
-                    "on-background": "#0b1c30",
-                    "error": "#ba1a1a",
-                    "surface": "#f8f9ff",
-                    "outline-variant": "#c6c6cd",
-                    "on-primary-fixed-variant": "#3f465c",
-                    "secondary": "#006c49",
-                    "tertiary-container": "#191c1e",
-                    "on-surface": "#0b1c30",
-                    "on-secondary-container": "#00714d",
-                    "inverse-on-surface": "#eaf1ff",
-                    "tertiary-fixed": "#e0e3e5",
-                    "on-error-container": "#93000a",
-                    "on-primary-container": "#7c839b",
-                    "surface-tint": "#565e74",
-                    "secondary-fixed": "#6ffbbe",
-                    "on-secondary": "#ffffff",
-                    "on-tertiary-fixed": "#191c1e",
-                    "on-secondary-fixed": "#002113",
-                    "on-tertiary": "#ffffff",
-                    "surface-dim": "#cbdbf5"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "spacing": {
-                    "unit": "8px",
-                    "container-max": "1280px",
-                    "margin-desktop": "64px",
-                    "section-gap": "120px",
-                    "gutter": "32px",
-                    "margin-mobile": "24px"
-            },
-            "fontFamily": {
-                    "headline-md": ["Hanken Grotesk"],
-                    "body-lg": ["Inter"],
-                    "display-lg-mobile": ["Hanken Grotesk"],
-                    "display-lg": ["Hanken Grotesk"],
-                    "headline-sm": ["Hanken Grotesk"],
-                    "label-caps": ["Geist"],
-                    "mono-label": ["Geist"],
-                    "body-md": ["Inter"]
-            },
-            "fontSize": {
-                    "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
-                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
-                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
-                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
-                    "mono-label": ["14px", {"lineHeight": "1", "fontWeight": "400"}],
-                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
-            }
-          },
-        },
-      }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        .ghost-border {
-            border: 1px solid #E2E8F0;
-            transition: border-color 0.3s ease;
-        }
-        .ghost-border:hover {
-            border-color: #000000;
-        }
-        .reveal {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .nav-dot-active::after {
-            content: '';
-            display: inline-block;
-            width: 4px;
-            height: 4px;
-            background-color: #006c49;
-            border-radius: 50%;
-            margin-left: 4px;
-            vertical-align: middle;
-        }
-    </style>
+<head>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-background text-on-surface selection:bg-secondary-container selection:text-on-secondary-container overflow-x-hidden">
-<!-- Top Navigation Bar -->
-<header class="fixed top-0 left-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30">
-<nav class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-unit">
-<a class="font-headline-sm text-headline-sm tracking-tighter text-primary" href="#">STUDIO</a>
-<div class="hidden md:flex items-center space-x-gutter">
-<a class="font-mono-label text-mono-label text-primary font-bold after:content-[''] after:block after:w-1 after:h-1 after:bg-secondary after:rounded-full after:mx-auto" href="#work">Work</a>
-<a class="font-mono-label text-mono-label text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
-<a class="font-mono-label text-mono-label text-on-surface-variant hover:text-primary transition-colors" href="#services">Services</a>
-<a class="font-mono-label text-mono-label text-on-surface-variant hover:text-primary transition-colors" href="#contact">Contact</a>
-</div>
-<button class="bg-primary text-on-primary font-mono-label text-mono-label px-6 py-2 rounded-lg hover:opacity-80 transition-opacity active:scale-95">Hire Me</button>
-</nav>
-</header>
-<main>
-<!-- Hero Section -->
-<section class="relative min-h-screen flex items-center pt-24 px-margin-mobile md:px-margin-desktop overflow-hidden">
 
-<div class="relative z-10 max-w-container-max mx-auto w-full">
-<div class="max-w-3xl">
-<span class="font-label-caps text-label-caps text-secondary mb-6 block tracking-widest uppercase">Creative Direction • Design • Strategy</span>
-<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8 leading-tight">
-                        Crafting digital experiences through <span class="text-on-surface-variant italic">Refined Minimalism</span>.
-                    </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-xl">
-                        A multi-disciplinary studio focused on high-end visual storytelling and technical precision for the world's most ambitious brands.
-                    </p>
-<div class="flex flex-col sm:flex-row gap-6">
-<a class="inline-flex items-center justify-center bg-primary text-on-primary font-mono-label text-mono-label px-10 py-5 rounded-lg hover:opacity-90 transition-all active:scale-95" href="#work">
-                            View My Work
-                        </a>
-<a class="inline-flex items-center justify-center border-2 border-primary text-primary font-mono-label text-mono-label px-10 py-5 rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-95" href="#contact">
-                            Get In Touch
-                        </a>
-</div>
-</div>
-</div>
-</section>
-<!-- About Section -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-bright" id="about">
-<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
-<div class="md:col-span-5 reveal">
-<div class="aspect-[4/5] relative overflow-hidden rounded-lg">
-<img class="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700" data-alt="A sophisticated black and white portrait of a creative professional in a minimalist concrete studio. The lighting is dramatic, high-contrast, casting soft shadows across the face. The background is clean and architectural, reflecting a high-end minimalist brand aesthetic with sharp focus and premium texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuHsFVOZaioj-D0G8Cuj6_s2kPvfrm7IPHDRd0N5WbbrcGYnn1_eTLbxoeCt47lgpO12Q7HWLGJW1yyFl7tEtwxzJQ08zDhPY9T66HWJXaAXnE-Oku5bucQ9c73tS6auNlg5kDqw4yXTSue9kAefkTr_w33QuliaxyXhiy4qHDyHiCEfJBj4ixfhrq-2sLbuSznKmiD37_moVA7IHYLNIRawj5FPOItkmA8a3tqn8uOps0iXJgwwM"/>
-</div>
-</div>
-<div class="md:col-span-6 md:col-start-7 reveal">
-<span class="font-label-caps text-label-caps text-secondary mb-4 block tracking-widest">ABOUT THE STUDIO</span>
-<h2 class="font-headline-md text-headline-md text-primary mb-8">Authoritative yet understated.</h2>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
-                        We believe that luxury is felt through precise alignment, expansive whitespace, and elite typography rather than decorative elements. Our approach is one of quiet confidence—staying out of the way to act as a sophisticated gallery frame for the content.
-                    </p>
-<p class="font-body-md text-body-md text-on-surface-variant mb-10 leading-relaxed">
-                        With over a decade of experience partnering with Fortune 500 companies and boutique luxury labels, we bring a technical edge to creative execution.
-                    </p>
-<div class="grid grid-cols-2 gap-gutter border-t border-outline-variant/30 pt-10">
-<div>
-<h4 class="font-mono-label text-mono-label font-bold text-primary mb-2">EXPERTISE</h4>
-<ul class="font-body-md text-body-md text-on-surface-variant space-y-1">
-<li>UI/UX Systems</li>
-<li>Brand Identity</li>
-<li>Creative Direction</li>
-</ul>
-</div>
-<div>
-<h4 class="font-mono-label text-mono-label font-bold text-primary mb-2">AWARDS</h4>
-<ul class="font-body-md text-body-md text-on-surface-variant space-y-1">
-<li>Site of the Year '23</li>
-<li>Red Dot Award</li>
-<li>Awwwards Gold</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Projects Grid -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop" id="work">
-<div class="max-w-container-max mx-auto">
-<div class="flex justify-between items-end mb-16 reveal">
-<div>
-<span class="font-label-caps text-label-caps text-secondary mb-4 block tracking-widest">SELECTED WORK</span>
-<h2 class="font-headline-md text-headline-md text-primary">Featured Projects</h2>
-</div>
-<div class="hidden md:block">
-<a class="font-mono-label text-mono-label text-on-surface-variant hover:text-primary transition-colors border-b border-primary/20 pb-1" href="#">View Archive</a>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-y-section-gap gap-x-gutter">
-<!-- Project 1 -->
-<div class="group reveal">
-<div class="aspect-video mb-8 overflow-hidden rounded-lg ghost-border bg-surface-container-low">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A clean, high-end editorial website layout for a luxury fashion brand. The design features expansive white space, elegant serif typography, and a minimalist grid. The image showcases a professional UI design in light mode with emerald green accents, reflecting a sense of quiet confidence and sophisticated minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7ePHAh3MfZhKt70QurRMyNRckrGVOqsSY9KaV1_RA1pG0xSxcqYk2jurlD_zobPox3z9lEGVtBfDiIrdAUgxmuPslw7pcq6bV97UV5MNp9WHsGXUXDYnhm8XtWGY5bUwoPGcXUr4fz8SAsTaxRJsWZh-dOSGAW28uzGfgCuFUWo_9Bm8WmL5j3wgngqGmK-ltKJxccyw8Qili3pRx8Jsn9VUX-PgDb8_UIuSdTMYy7EJDKS7t7kc"/>
-</div>
-<span class="font-label-caps text-label-caps text-secondary mb-2 block">EDITORIAL SYSTEM</span>
-<h3 class="font-headline-sm text-headline-sm text-primary mb-2">L'Avenue Luxury</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Redefining digital elegance for high-fashion archives.</p>
-</div>
-<!-- Project 2 -->
-<div class="group reveal" style="transition-delay: 200ms;">
-<div class="aspect-video mb-8 overflow-hidden rounded-lg ghost-border bg-surface-container-low">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A sleek, architectural dashboard interface for an urban planning firm. The UI uses low-contrast outlines and tonal layering in shades of light slate and off-white. There are subtle geometric patterns and emerald green status indicators, creating an atmosphere of technical precision and modern professionalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDZvUu3pqZnryuZLonG2m3EaZvS91r9fvFt_pBXwDyx3DfXZA3PV65MMMKkwaz-sX2swnRN_vhuxYEMj58PuRT1f0ptxqYwUGTyfHn_HJI2KbIw0eizNkYh1jOccGurJhBx8oHsuUmnub8_7vTqqTX-EQHCm7U9Tiq914-tAnvBSK1VJDkdDLwemRK7mDQPGTn8Zd_mxkZIgANHyIQZYN70eD72oKscmn-oJY856NXQA29NMC216E"/>
-</div>
-<span class="font-label-caps text-label-caps text-secondary mb-2 block">INTERFACE DESIGN</span>
-<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Architrave OS</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">A custom operating environment for modern architects.</p>
-</div>
-<!-- Project 3 -->
-<div class="group reveal">
-<div class="aspect-video mb-8 overflow-hidden rounded-lg ghost-border bg-surface-container-low">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist brand identity showcase for an organic skincare line. The packaging uses clean black typography on ivory matte bottles, set against a backdrop of soft daylight and linen textures. The image conveys a high-end, pure white aesthetic with an emphasis on sustainable luxury and premium material design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMA91Y-bNkqcM0PO0HKcTs8b-oxgwVV6GNxtDMBPNKiW8NZ7jifUdoQ9w1sK0wT3DZKpruzMFIrsu5yHOUtzJD0CmXeRlkxQIJtScMrcCLnDIElmgKmqJIeNtFM5pNsFdvyaWcgsRb-hlQJXyv9RpTC97HJWjtfKCNl2DUzAu6mZSGRNzwhS4o_KdZRhVwjsRqRl9dp8t4F8nYAWlMxI_IcDk7Lpz_lVAKQHB_YnHY1k3U_O_ONyA"/>
-</div>
-<span class="font-label-caps text-label-caps text-secondary mb-2 block">BRANDING</span>
-<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Naturae Essence</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Sustainable luxury through geometric minimalism.</p>
-</div>
-<!-- Project 4 -->
-<div class="group reveal" style="transition-delay: 200ms;">
-<div class="aspect-video mb-8 overflow-hidden rounded-lg ghost-border bg-surface-container-low">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An innovative mobile app interface for a high-end fitness brand. The UI features large imagery, bold headlines in Hanken Grotesk, and a sophisticated color palette of charcoal and slate. The design is airy and focused, emphasizing clean navigation and a premium user experience in light mode." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBql-uemY4FAPWsSffoIKAvNiTqmcfQRH4M2uNxiIwVDv9XOo1oRWvodhYZJ6GGemOf4EhpKdKQMZbaM-Aj5kKBFtCK_HVIOUdlNsFbujrrMNw-jsfPbvVFHI6ACH0WQb0hhxkyBT9zo9x8DH7Pwf7VxmYq1JiKz40-p_xri9VOb9EbDwSkJKZei7igbaUoHtqTy4Hqv1t2Zur3hqUcQ9S3e_9cfQdJRWZ0ffu3H_XCaah6qNCDBXo"/>
-</div>
-<span class="font-label-caps text-label-caps text-secondary mb-2 block">MOBILE DESIGN</span>
-<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Kinetic Health</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Proactive wellness through intelligent visual feedback.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Services Section -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-lowest" id="services">
-<div class="max-w-container-max mx-auto">
-<div class="text-center max-w-2xl mx-auto mb-20 reveal">
-<span class="font-label-caps text-label-caps text-secondary mb-4 block tracking-widest">WHAT WE DO</span>
-<h2 class="font-headline-md text-headline-md text-primary mb-6">High-end design solutions for high-impact ideas.</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Service 1 -->
-<div class="p-10 bg-surface border border-outline-variant/20 rounded-lg reveal">
-<div class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center mb-8">
-<span class="material-symbols-outlined text-on-secondary-container">design_services</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Strategic Design</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">
-                            Building visual foundations that align with business goals through rigorous research and aesthetic intuition.
-                        </p>
-<ul class="font-mono-label text-mono-label text-on-surface-variant space-y-3">
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary rounded-sm"></span> Visual Audits</li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary rounded-sm"></span> Brand Architecture</li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary rounded-sm"></span> Style Guides</li>
-</ul>
-</div>
-<!-- Service 2 -->
-<div class="p-10 bg-surface border border-outline-variant/20 rounded-lg reveal" style="transition-delay: 150ms;">
-<div class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center mb-8">
-<span class="material-symbols-outlined text-on-secondary-container">devices</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Product Design</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">
-                            Crafting seamless digital products with a focus on usability, accessibility, and high-fidelity aesthetics.
-                        </p>
-<ul class="font-mono-label text-mono-label text-on-surface-variant space-y-3">
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary rounded-sm"></span> Mobile Experiences</li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary rounded-sm"></span> SaaS Platforms</li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary rounded-sm"></span> Design Systems</li>
-</ul>
-</div>
-<!-- Service 3 -->
-<div class="p-10 bg-surface border border-outline-variant/20 rounded-lg reveal" style="transition-delay: 300ms;">
-<div class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center mb-8">
-<span class="material-symbols-outlined text-on-secondary-container">auto_awesome</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Creative Direction</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">
-                            Overseeing the soul of the brand across all touchpoints, ensuring consistency and emotional resonance.
-                        </p>
-<ul class="font-mono-label text-mono-label text-on-surface-variant space-y-3">
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary rounded-sm"></span> Photography Direction</li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary rounded-sm"></span> Motion Design</li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary rounded-sm"></span> Launch Campaigns</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<!-- Contact Section -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop" id="contact">
-<div class="max-w-container-max mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-section-gap">
-<div class="reveal">
-<span class="font-label-caps text-label-caps text-secondary mb-4 block tracking-widest">GET IN TOUCH</span>
-<h2 class="font-headline-md text-headline-md text-primary mb-8 max-w-sm">Let's build something exceptional together.</h2>
-<p class="font-body-md text-body-md text-on-surface-variant mb-12">
-                            Available for select collaborations and creative inquiries starting Q3 2024.
-                        </p>
-<div class="space-y-6">
-<a class="group flex items-center gap-4 hover:translate-x-2 transition-transform duration-300" href="mailto:hello@studio.com">
-<div class="w-10 h-10 rounded-full border border-outline-variant/40 flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
-<span class="material-symbols-outlined text-sm">alternate_email</span>
-</div>
-<span class="font-mono-label text-mono-label">hello@studio.com</span>
-</a>
-<div class="group flex items-center gap-4">
-<div class="w-10 h-10 rounded-full border border-outline-variant/40 flex items-center justify-center">
-<span class="material-symbols-outlined text-sm">location_on</span>
-</div>
-<span class="font-mono-label text-mono-label">Zurich, Switzerland</span>
-</div>
-</div>
-<div class="mt-16 flex gap-8">
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">LINKEDIN</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">DRIBBBLE</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">INSTAGRAM</a>
-</div>
-</div>
-<div class="reveal" style="transition-delay: 200ms;">
-<form class="space-y-8">
-<div class="space-y-2">
-<label class="font-label-caps text-label-caps text-primary">FULL NAME</label>
-<input class="w-full bg-transparent border-0 border-b-2 border-outline-variant/30 py-4 focus:ring-0 focus:border-secondary transition-colors font-body-md placeholder:text-outline-variant/50" placeholder="John Doe" type="text"/>
-</div>
-<div class="space-y-2">
-<label class="font-label-caps text-label-caps text-primary">EMAIL ADDRESS</label>
-<input class="w-full bg-transparent border-0 border-b-2 border-outline-variant/30 py-4 focus:ring-0 focus:border-secondary transition-colors font-body-md placeholder:text-outline-variant/50" placeholder="john@example.com" type="email"/>
-</div>
-<div class="space-y-2">
-<label class="font-label-caps text-label-caps text-primary">PROJECT DETAILS</label>
-<textarea class="w-full bg-transparent border-0 border-b-2 border-outline-variant/30 py-4 focus:ring-0 focus:border-secondary transition-colors font-body-md placeholder:text-outline-variant/50 resize-none" placeholder="Tell us about your project goals..." rows="4"></textarea>
-</div>
-<button class="w-full bg-primary text-on-primary font-mono-label text-mono-label py-5 rounded-lg hover:opacity-90 transition-all active:scale-95" type="submit">Send Message</button>
-</form>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="w-full py-section-gap bg-surface border-t border-outline-variant/20">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="space-y-6">
-<span class="font-headline-sm text-headline-sm text-primary">STUDIO</span>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
-                    Dedicated to the relentless pursuit of visual perfection and functional simplicity.
-                </p>
-</div>
-<div class="flex flex-col md:items-end justify-between gap-8 md:gap-0">
-<div class="flex gap-gutter">
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">LinkedIn</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Dribbble</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Instagram</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Email</a>
-</div>
-<p class="font-label-caps text-label-caps text-on-surface-variant/60">
-                    © 2024 STUDIO. ALL RIGHTS RESERVED.
-                </p>
-</div>
-</div>
-</footer>
-<script>
-        // Reveal animation on scroll
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
+<body>
 
-        window.addEventListener("scroll", reveal);
-        // Trigger on load
-        reveal();
 
-        // Simple smooth scrolling for nav links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
 
-        // Form submission micro-interaction
-        const form = document.querySelector('form');
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = form.querySelector('button');
-            const originalText = btn.innerText;
-            btn.innerText = 'Sending...';
-            btn.disabled = true;
-            
-            setTimeout(() => {
-                btn.innerText = 'Sent Successfully';
-                btn.classList.replace('bg-primary', 'bg-secondary');
-                form.reset();
-                setTimeout(() => {
-                    btn.innerText = originalText;
-                    btn.classList.replace('bg-secondary', 'bg-primary');
-                    btn.disabled = false;
-                }, 3000);
-            }, 1500);
-        });
-    </script>
-</body></html>
+<h1>Kalu Madari</h1>
+
+<p>MCA Student | Aspiring Computer Science Destroyer</p>
+
+<hr>
+
+<a href="#about">About</a> 
+<a href="#skills">Skills</a> 
+<a href="#projects">Projects</a> 
+<a href="#contact">Contact</a>
+
+
+
+<hr>
+
+
+
+<h2 id="about">About Me</h2>
+
+<img src="https://images.pexels.com/photos/32064778/pexels-photo-32064778.jpeg" alt="Profile Picture" width="150">
+
+<p>
+Hello! My name is Kalu Madari. I am pursuing MCA and preparing for a good Arrange Marriage Dahej.
+I enjoy learning unnecessary things that even do not exist.
+</p>
+
+<hr>
+
+<h2 id="skills">Skills</h2>
+
+<ul>
+
+<li>laziness</li>
+
+<li>kamchori</li>
+
+<li>chakki pissing</li>
+
+<li>99 in chemistry</li>
+
+
+
+</ul>
+
+<hr>
+
+<h2 id="projects">Projects</h2>
+
+<table border="1" cellpadding="10">
+
+<tr>
+
+<th>Project</th>
+
+<th>Description</th>
+
+</tr>
+
+<tr>
+
+<td>Portfolio Website</td>
+
+<td>Created using Chatgpt ki chaturai.</td>
+
+</tr>
+
+<tr>
+
+<td>Student timepass  System</td>
+
+<td>Built using haramkhori.</td>
+
+</tr>
+
+<tr>
+
+<td>Library Firing system</td>
+
+<td>Bhang ka aachar khake</td>
+
+</tr>
+
+</table>
+
+<hr>
+
+<h2 id="contact">Contact</h2>
+
+<p><b>Email :</b> chottachatrii@sarthak.com</p>
+
+<p><b>Phone :</b> +91-9876543210</p>
+
+<p><b>Location :</b> Hasinapur, Uttar Pradesh</p>
+
+
+
+</body>
+
+</html>
